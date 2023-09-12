@@ -27,7 +27,7 @@ class ScreenHome extends StatelessWidget {
                   leading: const CircleAvatar(
                     radius: 30,
                     backgroundImage: NetworkImage(
-                        "images\1506821.jpg"),
+                        "images1506821.jpg"),
                   ),
                 );
               },

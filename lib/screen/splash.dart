@@ -43,7 +43,8 @@ class _helloState extends State<hello> {
   }
 
   Future<void> gotoLogin() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
+    // ignore: use_build_context_synchronously
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) {
       return const ScreenLogin();
     }));

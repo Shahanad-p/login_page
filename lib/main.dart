@@ -3,7 +3,7 @@ import 'package:login_page/screen/splash.dart';
 
  
 
-void main(List<String> args) {
+void main() {
   runApp(const MyApp());
 }
 
