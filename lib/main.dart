@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/screen/splash.dart';
 
+ 
+
 void main(List<String> args) {
   runApp(const MyApp());
 }
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Login Sample',
       theme: ThemeData(primarySwatch: Colors.purple),
-      home:hello(),
+      home:const hello(),
       debugShowCheckedModeBanner: false,
     );
   }

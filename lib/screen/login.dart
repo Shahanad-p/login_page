@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/screen/home.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class ScreenLogin extends StatefulWidget {
-  ScreenLogin({super.key});
+  const ScreenLogin({super.key});
 
   @override
   State<ScreenLogin> createState() => _ScreenLoginState();
@@ -10,8 +11,8 @@ class ScreenLogin extends StatefulWidget {
 
 class _ScreenLoginState extends State<ScreenLogin> {
   final _usernameController = TextEditingController();
-
   final _passwordController = TextEditingController();
+  
 
   // bool _isDataMatched = true;
 
@@ -30,7 +31,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
             children: [
               TextFormField(
                 controller: _usernameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Username',
                 ),
@@ -47,13 +48,13 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   }
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextFormField(
                 controller: _passwordController,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Password',
                 ),
@@ -70,7 +71,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   }
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton.icon(
@@ -81,8 +82,8 @@ class _ScreenLoginState extends State<ScreenLogin> {
                     print('Data empty');
                   }
                 },
-                icon: Icon(Icons.check),
-                label: Text('Login'),
+                icon: const Icon(Icons.check),
+                label: const Text('Login'),
               ),
             ],
           ),
@@ -104,14 +105,14 @@ class _ScreenLoginState extends State<ScreenLogin> {
           context: ctx,
           builder: (ctx1) {
             return AlertDialog(
-              title: Text("ERROR"),
+              title: const Text("ERROR"),
               content: Text(_errormessage),
               actions: [
                 TextButton(
                   onPressed: () {
                     Navigator.of(ctx1).pop();
                   },
-                  child: Text("CLOSE"),
+                  child: const Text("CLOSE"),
                 )
               ],
             );

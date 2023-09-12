@@ -8,14 +8,14 @@ class ScreenHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HOME'),
-        backgroundColor: Color.fromARGB(255, 26, 25, 25),
+        title: const Text('HOME'),
+        backgroundColor: const Color.fromARGB(255, 26, 25, 25),
         actions: [
           IconButton(
               onPressed: () {
                 singout(context);
               },
-              icon: Icon(Icons.exit_to_app)),
+              icon: const Icon(Icons.exit_to_app)),
         ],
       ),
       body: SafeArea(
@@ -24,7 +24,7 @@ class ScreenHome extends StatelessWidget {
                 return ListTile(
                   title: Text("Favourite cars $index"),
                   subtitle: Text("Car name $index"),
-                  leading: CircleAvatar(
+                  leading: const CircleAvatar(
                     radius: 30,
                     backgroundImage: NetworkImage(
                         "images\1506821.jpg"),
@@ -32,7 +32,7 @@ class ScreenHome extends StatelessWidget {
                 );
               },
               separatorBuilder: (ctx, index) {
-                return Divider();
+                return const Divider();
               },
               itemCount: 10)),
     );
@@ -40,6 +40,6 @@ class ScreenHome extends StatelessWidget {
 
   singout(BuildContext ctx) {
     Navigator.of(ctx).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (ctx1) => ScreenLogin()), (route) => false);
+        MaterialPageRoute(builder: (ctx1) => const ScreenLogin()), (route) => false);
   }
 }
